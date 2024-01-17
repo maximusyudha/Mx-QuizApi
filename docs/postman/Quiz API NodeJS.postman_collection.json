@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "61d64e2c-cb35-4f4a-a762-5e4dc84f4a91",
+		"name": "Quiz API NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26492293",
+		"_collection_link": "https://winter-meadow-711833.postman.co/workspace/SuretyBONDOOOOO~a8397170-7ec4-4bb7-92d5-daf7189d8c40/collection/26496315-61d64e2c-cb35-4f4a-a762-5e4dc84f4a91?action=share&source=collection_link&creator=26492293"
+	},
+	"item": [
+		{
+			"name": "Quiz",
+			"item": [
+				{
+					"name": "Create Quiz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quiz\": \"eadsfdf\",\r\n    \"a\":\"fdhgdfhdh\",\r\n    \"b\":\"hdhrtb\",\r\n    \"c\":\"rb btrbr\",\r\n    \"d\": \"bebtr\",\r\n    \"key\": \"a\",\r\n    \"categoryId\": 2,\r\n    \"levelId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/quizzes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Quiz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ngrok-url}}/api/quizzes/",
+							"host": [
+								"{{ngrok-url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id Quiz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quizzes/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Quiz",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quizzes/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Quiz",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quizzes/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quizzes/category/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Level by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/quizzes/level/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"quizzes",
+								"level",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jobsheet",
+			"item": [
+				{
+					"name": "Submit One",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quizId\": 2,\r\n    \"answer\": \"b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/jobsheet/one",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobsheet",
+								"one"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Many",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quizId\": [\r\n        2,\r\n        3\r\n    ],\r\n    \"answer\": [\r\n        \"b\",\r\n        \"a\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/jobsheet/many",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"jobsheet",
+								"many"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

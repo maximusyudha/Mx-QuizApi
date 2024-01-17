@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+
+# User-specific files
+npm-debug.log
+yarn-error.log
+
+# Environment configuration
+.env
+
+# Build artifacts
+dist/
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
